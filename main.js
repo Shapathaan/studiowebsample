@@ -53,3 +53,19 @@ el.style.transition="all 0.8s";
 observer.observe(el);
 
 });
+/* ======================= */
+/* MOBILE MENU */
+/* ======================= */
+
+const toggle = document.getElementById("menuToggle")
+const menu = document.getElementById("navMenu")
+
+if(toggle){
+
+toggle.addEventListener("click",()=>{
+
+menu.classList.toggle("showMenu")
+
+})
+
+}
