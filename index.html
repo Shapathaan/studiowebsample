@@ -1,1 +1,346 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Golden Focus Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:Poppins;
+overflow-x:hidden;
+}
+
+/* INTRO VIDEO */
+
+#intro{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+z-index:9999;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+transition:transform 1.6s ease, opacity 1.6s ease;
+}
+
+#intro video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hideIntro{
+transform:translateY(-100%);
+opacity:0;
+}
+
+/* MAIN SITE */
+
+#main{
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.showMain{
+opacity:1;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(to bottom,rgba(0,0,0,0.9),transparent);
+z-index:100;
+}
+
+nav img{
+height:50px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#e8c873;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+height:95vh;
+background:
+linear-gradient(to top, #0b0b0b 10%, transparent),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:8%;
+}
+
+.heroContent{
+max-width:600px;
+}
+
+.hero h1{
+font-family:Cinzel;
+font-size:70px;
+color:#c9a24a;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+color:#ddd;
+}
+
+.hero button{
+padding:12px 30px;
+border:none;
+font-size:16px;
+background:#c9a24a;
+color:black;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* ROWS */
+
+.row{
+margin-top:40px;
+padding-left:60px;
+}
+
+.row h2{
+margin-bottom:20px;
+font-family:Cinzel;
+color:#e8c873;
+}
+
+.rowPosters{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding-bottom:20px;
+}
+
+.rowPosters::-webkit-scrollbar{
+display:none;
+}
+
+.poster{
+min-width:260px;
+height:150px;
+background:#222;
+border-radius:6px;
+overflow:hidden;
+cursor:pointer;
+transition:transform .3s;
+position:relative;
+}
+
+.poster img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.poster:hover{
+transform:scale(1.15);
+z-index:5;
+box-shadow:0 10px 25px rgba(0,0,0,.8);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:100px;
+padding:40px;
+text-align:center;
+color:#777;
+border-top:1px solid #222;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- INTRO VIDEO -->
+
+<div id="intro">
+
+<video autoplay muted playsinline id="introVideo">
+<source src="Studiointro.mp4" type="video/mp4">
+</video>
+
+</div>
+
+
+<div id="main">
+
+<!-- NAVBAR -->
+
+<nav>
+
+<img src="logo.png">
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="films.html">Films</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="heroContent">
+
+<h1>Golden Focus</h1>
+
+<p>
+A cinematic production studio dedicated to crafting
+powerful visual storytelling for films, brands and digital media.
+</p>
+
+<button>Watch Showreel</button>
+
+</div>
+
+</section>
+
+
+<!-- ROW 1 -->
+
+<div class="row">
+
+<h2>Featured Productions</h2>
+
+<div class="rowPosters">
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ROW 2 -->
+
+<div class="row">
+
+<h2>Commercial Projects</h2>
+
+<div class="rowPosters">
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae">
+</div>
+
+<div class="poster">
+<img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f">
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 Golden Focus Studio
+
+</footer>
+
+</div>
+
+
+<script>
+
+const intro = document.getElementById("intro")
+const main = document.getElementById("main")
+const video = document.getElementById("introVideo")
+
+video.onended = () => {
+
+intro.classList.add("hideIntro")
+
+setTimeout(()=>{
+main.classList.add("showMain")
+},700)
+
+}
+
+</script>
+
+</body>
+</html>
