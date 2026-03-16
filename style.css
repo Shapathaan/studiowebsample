@@ -21,12 +21,39 @@ z-index:1;
 position:fixed;
 top:0;
 left:0;
-
 width:100vw;
 height:100vh;
-
 z-index:-2;
 pointer-events:none;
+}
+
+/* ======================= */
+/* FILM GRAIN + VIGNETTE */
+/* ======================= */
+
+body::after{
+
+content:"";
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+background:
+radial-gradient(circle at center, transparent 60%, rgba(0,0,0,0.7) 100%),
+url("https://grainy-gradients.vercel.app/noise.svg");
+
+opacity:0.35;
+
+mix-blend-mode:overlay;
+
+z-index:9998;
+
 }
 
 /* ======================= */
@@ -54,9 +81,7 @@ nav img{
 height:52px;
 }
 
-/* ======================= */
 /* MENU */
-/* ======================= */
 
 nav ul{
 display:flex;
@@ -64,7 +89,7 @@ gap:22px;
 list-style:none;
 }
 
-/* EMBOSSED MENU BUTTON */
+/* EMBOSSED MENU */
 
 nav a{
 
@@ -79,6 +104,7 @@ box-shadow:
 
 color:#e8c873;
 font-weight:500;
+
 transition:.25s;
 }
 
@@ -128,6 +154,7 @@ max-width:600px;
 
 background:rgba(0,0,0,0.35);
 padding:40px;
+
 border-radius:14px;
 
 backdrop-filter:blur(10px);
@@ -156,7 +183,6 @@ color:black;
 cursor:pointer;
 
 transition:.25s;
-
 }
 
 .hero button:hover{
@@ -175,7 +201,6 @@ box-shadow:0 0 15px #c9a24a;
 
 margin-top:80px;
 padding-left:60px;
-
 }
 
 .row h2{
@@ -183,7 +208,6 @@ padding-left:60px;
 font-family:Cinzel;
 color:#e8c873;
 margin-bottom:20px;
-
 }
 
 /* POSTERS */
@@ -193,7 +217,6 @@ margin-bottom:20px;
 display:flex;
 gap:18px;
 overflow-x:auto;
-
 }
 
 .rowPosters::-webkit-scrollbar{
@@ -204,9 +227,11 @@ display:none;
 
 min-width:260px;
 height:150px;
+
 border-radius:10px;
 
 overflow:hidden;
+
 transition:.35s;
 
 position:relative;
@@ -230,7 +255,7 @@ box-shadow:
 z-index:5;
 }
 
-/* NETFLIX HOVER TRAILER */
+/* NETFLIX TRAILER */
 
 .poster video{
 
@@ -245,7 +270,6 @@ object-fit:cover;
 
 opacity:0;
 transition:.3s;
-
 }
 
 .poster:hover video{
@@ -257,7 +281,7 @@ opacity:0;
 }
 
 /* ======================= */
-/* FILM GRID PAGE */
+/* FILM GRID */
 /* ======================= */
 
 .filmGrid{
@@ -274,6 +298,7 @@ gap:30px;
 .filmCard{
 
 background:rgba(20,20,20,.6);
+
 border-radius:10px;
 
 overflow:hidden;
@@ -299,9 +324,7 @@ transform:translateY(-12px);
 box-shadow:0 0 20px #c9a24a;
 }
 
-/* ======================= */
 /* SERVICES */
-/* ======================= */
 
 .services{
 
@@ -333,24 +356,18 @@ color:#e8c873;
 margin-bottom:12px;
 }
 
-/* ======================= */
 /* ABOUT */
-/* ======================= */
 
 .about{
 
 padding:140px 15%;
-
 line-height:1.8;
 color:#ddd;
 }
 
-/* ======================= */
 /* CONTACT */
-/* ======================= */
 
 .contact{
-
 padding:140px 20%;
 }
 
@@ -386,17 +403,12 @@ color:white;
 .contact button{
 
 background:#c9a24a;
-
 border:none;
-
 padding:12px;
-
 cursor:pointer;
 }
 
-/* ======================= */
 /* FOOTER */
-/* ======================= */
 
 footer{
 
@@ -410,9 +422,7 @@ color:#777;
 border-top:1px solid #222;
 }
 
-/* ======================= */
 /* INTRO VIDEO */
-/* ======================= */
 
 #intro{
 
@@ -443,9 +453,7 @@ transform:translateY(-100%);
 opacity:0;
 }
 
-/* ======================= */
 /* MAIN PAGE FADE */
-/* ======================= */
 
 #main{
 
@@ -453,16 +461,12 @@ opacity:0;
 transition:opacity 1s;
 }
 
-/* ======================= */
 /* 3D LOGO */
-/* ======================= */
 
 .logo3d{
-
 transition:transform .6s;
 }
 
 .logo3d:hover{
-
 transform:rotateY(20deg) scale(1.1);
 }
