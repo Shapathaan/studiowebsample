@@ -9,15 +9,11 @@ intro.classList.add("hideIntro");
 }
 
 setTimeout(()=>{
-
 if(main){
-main.style.opacity = "1";
+main.style.opacity="1";
 }
+},700);
 
-},800);
-
-
-// remove intro layer completely
 setTimeout(()=>{
 if(intro){
 intro.remove();
@@ -26,11 +22,34 @@ intro.remove();
 
 }
 
-
 if(video){
-video.onended = revealSite;
+video.onended=revealSite;
 }
 
-
-// fallback if video fails
 setTimeout(revealSite,6000);
+
+
+/* SCROLL REVEAL */
+
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.style.transform="translateY(0)";
+entry.target.style.opacity="1";
+}
+
+});
+
+});
+
+document.querySelectorAll(".filmCard,.service,.poster").forEach(el=>{
+
+el.style.transform="translateY(40px)";
+el.style.opacity="0";
+el.style.transition="all 0.8s";
+
+observer.observe(el);
+
+});
