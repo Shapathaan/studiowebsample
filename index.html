@@ -18,6 +18,11 @@
 <body>
 
 
+<!-- GOLD PARTICLE BACKGROUND -->
+
+<canvas id="particles"></canvas>
+
+
 <!-- INTRO VIDEO -->
 
 <div id="intro">
@@ -30,8 +35,6 @@
 
 
 
-<!-- MAIN WEBSITE -->
-
 <div id="main">
 
 
@@ -39,21 +42,23 @@
 
 <nav>
 
-<img src="logo.png">
+<img src="logo.png" class="logo3d">
 
 <ul>
+
 <li><a href="index.html">Home</a></li>
 <li><a href="films.html">Films</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
+
 </ul>
 
 </nav>
 
 
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -62,12 +67,11 @@
 <h1>Golden Focus Studio</h1>
 
 <p>
-A cinematic production studio crafting powerful visual storytelling
-through film, commercial production and digital media.
+A cinematic production studio crafting powerful visual storytelling.
 </p>
 
 <button onclick="location.href='films.html'">
-View Our Work
+Explore Films
 </button>
 
 </div>
@@ -76,67 +80,47 @@ View Our Work
 
 
 
-<!-- FILM ROW 1 -->
+<!-- NETFLIX ROW -->
 
 <div class="row">
 
-<h2>Featured Productions</h2>
+<h2>Featured Films</h2>
 
 <div class="rowPosters">
 
+
 <div class="poster">
+
+<video muted loop>
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+</video>
+
 <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66">
+
 </div>
 
+
 <div class="poster">
+
+<video muted loop>
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+</video>
+
 <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4">
+
 </div>
 
+
 <div class="poster">
+
+<video muted loop>
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+</video>
+
 <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f">
-</div>
 
 </div>
 
-</div>
-
-
-
-<!-- FILM ROW 2 -->
-
-<div class="row">
-
-<h2>Commercial Projects</h2>
-
-<div class="rowPosters">
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae">
-</div>
-
-<div class="poster">
-<img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f">
-</div>
 
 </div>
 
@@ -146,7 +130,7 @@ View Our Work
 
 <footer>
 
-© 2026 Golden Focus Studio — All Rights Reserved
+© 2026 Golden Focus Studio
 
 </footer>
 
@@ -156,6 +140,7 @@ View Our Work
 
 
 <script src="main.js"></script>
+<script src="particles.js"></script>
 
 </body>
 </html>
