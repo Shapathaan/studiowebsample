@@ -470,3 +470,169 @@ transition:transform .6s;
 .logo3d:hover{
 transform:rotateY(20deg) scale(1.1);
 }
+
+/* ================================= */
+/* MOBILE RESPONSIVE SYSTEM */
+/* ================================= */
+
+/* TABLETS */
+
+@media (max-width:1024px){
+
+nav{
+padding:16px 30px;
+}
+
+.hero{
+padding-left:5%;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.row{
+padding-left:30px;
+}
+
+.filmGrid{
+padding:100px 30px;
+}
+
+.services{
+padding:100px 30px;
+}
+
+.contact{
+padding:120px 12%;
+}
+
+}
+
+
+/* PHONES */
+
+@media (max-width:768px){
+
+/* NAVBAR */
+
+nav{
+padding:14px 20px;
+}
+
+nav ul{
+gap:10px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+padding:6px 12px;
+font-size:14px;
+}
+
+
+/* HERO */
+
+.hero{
+padding:120px 20px 60px 20px;
+text-align:center;
+justify-content:center;
+}
+
+.heroContent{
+padding:25px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.hero button{
+font-size:14px;
+}
+
+
+/* FILM ROWS */
+
+.row{
+padding-left:20px;
+}
+
+.poster{
+min-width:200px;
+height:120px;
+}
+
+
+/* FILM GRID */
+
+.filmGrid{
+padding:100px 20px;
+grid-template-columns:repeat(2,1fr);
+}
+
+.filmCard img{
+height:220px;
+}
+
+
+/* SERVICES */
+
+.services{
+padding:100px 20px;
+grid-template-columns:1fr;
+}
+
+.service{
+padding:25px;
+}
+
+
+/* ABOUT */
+
+.about{
+padding:120px 25px;
+}
+
+
+/* CONTACT */
+
+.contact{
+padding:120px 20px;
+}
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width:480px){
+
+.hero h1{
+font-size:28px;
+}
+
+.poster{
+min-width:170px;
+height:100px;
+}
+
+.filmGrid{
+grid-template-columns:1fr;
+}
+
+nav ul{
+gap:6px;
+}
+
+nav a{
+font-size:12px;
+padding:5px 10px;
+}
+
+}
