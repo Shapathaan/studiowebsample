@@ -402,3 +402,69 @@ opacity:0;
 transition:opacity 1s;
 
 }
+/* PARTICLE CANVAS */
+
+#particles{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-1;
+
+}
+
+
+
+/* 3D LOGO */
+
+.logo3d{
+
+transition:transform .6s;
+
+}
+
+.logo3d:hover{
+
+transform:rotateY(20deg) scale(1.1);
+
+}
+
+
+
+/* NETFLIX HOVER TRAILER */
+
+.poster{
+
+position:relative;
+
+}
+
+.poster video{
+
+position:absolute;
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+opacity:0;
+
+transition:.3s;
+
+}
+
+.poster:hover video{
+
+opacity:1;
+
+}
+
+.poster:hover img{
+
+opacity:0;
+
+}
