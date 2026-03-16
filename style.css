@@ -1,0 +1,251 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:Poppins, sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:#e8c873;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:linear-gradient(to bottom,rgba(0,0,0,.9),transparent);
+z-index:100;
+}
+
+nav img{
+height:50px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+height:95vh;
+background:
+linear-gradient(to top,#0b0b0b 15%,transparent),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:8%;
+}
+
+.heroContent{
+max-width:600px;
+}
+
+.hero h1{
+font-family:Cinzel;
+font-size:70px;
+color:#c9a24a;
+}
+
+.hero p{
+margin:20px 0;
+color:#ddd;
+}
+
+.hero button{
+padding:12px 30px;
+background:#c9a24a;
+border:none;
+color:black;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* NETFLIX ROWS */
+
+.row{
+margin-top:60px;
+padding-left:60px;
+}
+
+.row h2{
+font-family:Cinzel;
+color:#e8c873;
+margin-bottom:20px;
+}
+
+.rowPosters{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:20px;
+}
+
+.rowPosters::-webkit-scrollbar{
+display:none;
+}
+
+.poster{
+min-width:260px;
+height:150px;
+border-radius:6px;
+overflow:hidden;
+transition:.35s;
+cursor:pointer;
+}
+
+.poster img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.poster:hover{
+transform:scale(1.15);
+box-shadow:0 12px 30px rgba(0,0,0,.8);
+z-index:5;
+}
+
+/* FILMS GRID */
+
+.filmGrid{
+padding:120px 60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.filmCard{
+background:#111;
+border-radius:8px;
+overflow:hidden;
+transition:.3s;
+}
+
+.filmCard img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.filmCard:hover{
+transform:translateY(-10px);
+}
+
+/* SERVICES */
+
+.services{
+padding:120px 60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.service{
+background:#111;
+padding:40px;
+border:1px solid #9b7a2e;
+border-radius:8px;
+}
+
+.service h3{
+color:#e8c873;
+margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+padding:140px 15%;
+line-height:1.8;
+color:#ddd;
+}
+
+/* CONTACT */
+
+.contact{
+padding:140px 20%;
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact input,
+.contact textarea{
+padding:12px;
+background:#111;
+border:1px solid #333;
+color:white;
+}
+
+.contact button{
+background:#c9a24a;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+text-align:center;
+padding:40px;
+color:#777;
+border-top:1px solid #222;
+}
+
+/* INTRO VIDEO */
+
+#intro{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+z-index:9999;
+transition:transform 1.5s ease, opacity 1.5s ease;
+}
+
+#intro video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hideIntro{
+transform:translateY(-100%);
+opacity:0;
+}
+
+#main{
+opacity:0;
+transition:opacity 1s;
+}
+
+.showMain{
+opacity:1;
+}
