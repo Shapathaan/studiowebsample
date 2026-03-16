@@ -636,3 +636,101 @@ padding:5px 10px;
 }
 
 }
+/* ======================= */
+/* HAMBURGER MENU */
+/* ======================= */
+
+.menuToggle{
+
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+
+}
+
+.menuToggle span{
+
+width:26px;
+height:3px;
+
+background:#c9a24a;
+
+border-radius:2px;
+
+transition:.3s;
+
+}
+
+
+/* ======================= */
+/* MOBILE MENU */
+/* ======================= */
+
+@media (max-width:768px){
+
+.menuToggle{
+display:flex;
+}
+
+nav ul{
+
+position:absolute;
+
+top:70px;
+right:20px;
+
+flex-direction:column;
+
+background:rgba(20,20,20,0.8);
+
+backdrop-filter:blur(14px);
+
+padding:20px;
+
+border-radius:10px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+display:none;
+
+}
+
+nav ul.showMenu{
+display:flex;
+}
+
+}
+
+
+/* ======================= */
+/* SHINING GOLD TEXT */
+/* ======================= */
+
+.goldText{
+
+background:linear-gradient(
+90deg,
+#c9a24a,
+#fff3c4,
+#c9a24a
+);
+
+background-size:200% auto;
+
+color:transparent;
+
+background-clip:text;
+-webkit-background-clip:text;
+
+animation:shine 4s linear infinite;
+
+}
+
+@keyframes shine{
+
+to{
+background-position:200% center;
+}
+
+}
