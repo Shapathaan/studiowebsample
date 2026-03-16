@@ -2,34 +2,35 @@ const intro = document.getElementById("intro");
 const main = document.getElementById("main");
 const video = document.getElementById("introVideo");
 
-function showSite(){
+function revealSite(){
 
 if(intro){
 intro.classList.add("hideIntro");
 }
 
-if(main){
 setTimeout(()=>{
-main.classList.add("showMain");
-},500);
 
+if(main){
+main.style.opacity = "1";
 }
 
-// remove intro completely after animation
+},800);
+
+
+// remove intro layer completely
 setTimeout(()=>{
 if(intro){
-intro.style.display="none";
+intro.remove();
 }
 },2000);
 
 }
 
 
-// if video ends normally
 if(video){
-video.onended = showSite;
+video.onended = revealSite;
 }
 
 
-// fallback: if video doesn't load
-setTimeout(showSite,6000);
+// fallback if video fails
+setTimeout(revealSite,6000);
